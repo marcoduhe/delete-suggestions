@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar los Received SKUS</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      padding: 3px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    * {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 8px 5px;
+      border: 1px solid #CCC;
+    }
+
+    button {
+      display: inline-block;
+      width: 49%;
+      padding: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100%;
+    }
+
+    #top {
+      height: 180px;
+      position: relative;
+
+    }
+
+    #bottom {
+      height: 100%;
+      margin-top: -10px;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="/delete_suggestions.js"></script>
+  Ingrese su cuenta: <input type="text" name="account" size="30" id="account" placeholder="Ex: marcoduhe"><br>
+  Ingrese su VTEX API Key: <input type="text" name="ApiKey" id="ApiKey" size="30" placeholder="vtexappkey-XXXXX-XXXXX"><br>
+  Ingrese su VTEX APP TOKEN (Este no se guardará): <input type="text" name="ApiToken" id="ApiToken" placeholder="XXXXXXXXXXX" size="30"><br>
+  Ingrese su status de suggestion ('Accepted', 'Denied', 'WaitingReview' , 'Reviewed' or 'Pending'): <input type="text" name="_status" id="_status" placeholder="Accepted" size="50"><br>
+  ¿Se eliminará por seller? (Si es sí, ingrese el ID del seller): <input type="text" name="sellerId" id="sellerId" size="10" placeholder="EX: marcoduhe"><br>
+  ¿Cuál es el límite de registros? (Si existe límite, ingresar la cantidad): <input type="text" name="max" id="max" size="10" placeholder="EX: 20000"><br>
+  <button onclick="start('output')"> START DELETE SUGGESTIONS</button>
+  <div id="bottom">
+      <textarea id="output"></textarea>
+  </div>
+  
+  
+</body>
+</html>
