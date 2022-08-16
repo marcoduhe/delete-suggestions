@@ -39,7 +39,7 @@
     }
 
     textarea {
-      width: 100%;
+      width: 33%;
       height: 100%;
     }
 
@@ -63,11 +63,11 @@
   Ingrese su VTEX API Key: <input type="text" name="ApiKey" id="ApiKey" size="30" placeholder="vtexappkey-XXXXX-XXXXX"><br>
   Ingrese su VTEX APP TOKEN (Este no se guardará): <input type="text" name="ApiToken" id="ApiToken" placeholder="XXXXXXXXXXX" size="30"><br>
   Ingrese su status de suggestion ('Accepted', 'Denied', 'WaitingReview' , 'Reviewed' or 'Pending'): <br><select name="_status" id="_status">
-    <option value="Accepted" selected>Accepted</option>
-    <option value="Denied" >Denied</option>
-    <option value="WaitingReview" >WaitingReview</option>
-    <option value="Reviewed" >Reviewed</option>
-    <option value="Pending">Pending</option>
+    <option value="accepted" selected>Accepted</option>
+    <option value="denied" >Denied</option>
+    <option value="waitingReview" >WaitingReview</option>
+    <option value="reviewed" >Reviewed</option>
+    <option value="pending">Pending</option>
   </select><br><br>
   Ingrese su type de suggestion ('new', 'update'): <br><select name="_type" id="_type">
     <option value="new" >New</option>
@@ -78,6 +78,8 @@
   <button onclick="start('output')"> START DELETE SUGGESTIONS</button>
   <div id="bottom">
       <textarea id="output"></textarea>
+      <textarea id="output2"></textarea>
+      <textarea id="output3"></textarea>
   </div>
   
   
